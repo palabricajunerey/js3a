@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.2.1-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <p>Click the button to call the function</p>
+        <form>
+            <input class="mt-2" name="num1" placeholder="Enter a Number"><br>
+            <input class="mt-2" name="num2" placeholder="Enter a Number"><br>
+            <button class="mt-2" onclick="add(num1.value, num2.value)">Add</button>
+        </form>
+    </div>
+
+    <script>
+        function add(num1, num2) {
+            if (num1 == "" || num2 == "") { //&&
+                return;
+            }
+            let sum = parseInt(num1) + parseInt(num2);
+            alert("The sum is: " + sum);
+        }
+
+        
+        // document.write(fruits[2] +  "<br>")
+        // document.write(fruits[0] +  "<br>")
+
+        /*
+        for(init; condition; expression){
+            //codes
+        }    
+        */
+       let fruits = ["apple", "mango", "banana", "grapes", "pineapple", "chico", "tomato", "avocado", "star"];
+        let i;
+        //reverse
+        // for (i = fruits.length - 1; i >= 0; i--) {
+        //     document.write(fruits[i] + "<br>")
+        // }
+        document.write("<b>Using for-loop</b>")
+        document.write("<div class='container-fluid'>");
+            for(i = 0; i < fruits.length; i++){ //index 0, 1, 2
+                document.write(fruits[i]  + "<br>");
+            }
+            document.write("<hr>");
+            
+        /*
+        for(init; condition; expression){
+            //execution
+        }
+
+        while(condition){
+            //execution
+        }        
+        */
+        document.write("<b>Using while-loop</b><br>");
+        let a = 0;
+        while(a < fruits.length){
+            // if(a == 2){
+            //     //continue;
+            //     //break;
+            // }
+
+            document.write(fruits[a] + "<br>");
+            
+            a++;
+        }
+
+        //digit counter using while-loop
+        // let num = prompt("Enter the number", "Enter . . .");
+        // let counter = 0;
+        // while(num > 0){
+        //     num = Math.trunc(num / 10); //14, 1, 0
+        //     counter++ //1, 2, 3
+        // }
+
+        // alert("Digits: " + counter);
+        /*
+        switch(expression){
+            case 1:
+                //execution
+            case 2:
+                //execution
+            case 3:
+                //execution
+            default:
+                //execution
+        }
+        */
+
+        // let char = prompt("Enter a letter", "Enter . . .");
+        // switch(char.toLowerCase()){
+        //     case "a":
+        //     case "e":
+        //     case "i":
+        //     case "o":
+        //     case "u":
+        //         alert(char.toUpperCase() + " is a vowel");
+        //         break;
+        //     default:
+        //         alert(char.toUpperCase() + " is a consonant");
+        //         break;
+        // }
+        document.write("<br>");
+        //object
+        //name:value
+            // let person = {
+            //     name: "Juan",
+            //     age: 23,
+            //     address: "Camingawan"
+            // }
+
+            // document.write(person.name);
+
+            //error handling
+            // var e = 100;
+            // try{
+            //     alert("Value of e variable is: " + e)
+            // }catch(error){
+            //     alert(error);
+            // }finally{
+            //     alert("Ma execute biskan may error or wala");
+            // }
+
+       document.write("</div>");
+    </script>
+</body>
+
+</html>
